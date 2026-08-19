@@ -1,0 +1,301 @@
+/* VARIABLES GLOBALES */
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --rojo: #E5252E;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --card-size: 280px;
+}
+
+body {
+    margin: 0;
+    font-family: Quicksand, sans-serif;
+}
+
+/* ESTILOS DE LA PÁGINA DE LOGIN */
+.login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+
+/* VARIABLES GLOBALES PARA TEXTO */
+.logo {
+    width: 150px;
+    margin-bottom: 48px;
+    justify-self: center;
+    display: none;
+}
+
+.title {
+    font-size: var(--lg);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--very-light-pink);
+    font-size: var (--md);
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* VARIABLES PARA FORMULARIO */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: var (--sm);
+    font-weight:  bold;
+    margin-bottom: 4px;
+}
+
+.input {
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 12px;
+}
+
+.primary-button {
+    background-color: var(--rojo);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--text-input-field);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.email-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.resend {
+    color: var(--rojo);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#red {
+    color: var(--rojo);
+}
+
+#bold {
+    font-weight: 600;
+}
+
+.alternative-button {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: var(--rojo) 1px solid;
+    color: var(--rojo);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.a-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVE PARA PANTALLAS GRANDES */
+@media (max-width: 640px) {
+    .logo {
+        display: block;
+    }
+
+    .login {
+        height: 100vh;
+    }
+
+    .form-container {
+        width: 300px;
+    }
+}
+
+/***********************/
+@media (min-width: 641px) {
+    .form-containter {
+        width: 400px;
+    }
+}
+
+/****************************************/
+/****************************************/
+/*CONTENIDO DE TALLER 2 A PARTIR DE AQUÍ*/
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card-size));
+    gap: 26px;
+    place-content: center;
+}
+
+.product-card {
+    width: var(--card-size);
+}
+
+.product-card img {
+    width: var(--card-size);
+    height: var(--card-size);
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-info figure {
+    margin: 0;
+}
+
+.product-info figure img {
+    width: 35px;
+    height: 35px;
+}
+
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+}
+
+@media (max-width: 640px) {
+    :root {
+        --card-size: 140px;
+    }
+}
+
+/* MENÚ ESCRITORIO */
+.menu-desktop {
+    width: 100px;
+    padding: 20px 26px;
+    margin: 0 0 0 0;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    list-style: none;
+}
+
+.menu-desktop li {
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+.menu-desktop li:last-child {
+    margin-bottom: 0;
+}
+
+.menu-desktop li:not(:last-child) a {
+    font-weight: bold;
+}
+
+.menu-desktop li a {
+    color: var(--black);
+    font-size: var(--md);
+}
+
+.menu-desktop li:last-child {
+    border-top: 1px solid var(--very-light-pink);
+    padding-top: 24px;
+}
+
+/* MENÚ MÓVIL */
+.menu-mobile {
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.menu-mobile ul {
+    padding: 0;
+    margin: 0 0 24px;
+    list-style: none;
+}
+
+.menu-mobile li {
+    margin-bottom: 24px;
+}
+
+.menu-mobile a {
+    color: var(--black);
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.menu-mobile ul:first-child {
+    border-bottom: 1px solid var(--very-light-pink);
+    padding-bottom: 8px;
+}
+
+.menu-mobile .email {
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+    font-weight: 300;
+}
+
+.menu-mobile .sign-out {
+    font-size: var(--sm);
+}
